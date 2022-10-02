@@ -3,11 +3,11 @@
 @import "global/container";
 @import "global/fonts";
 @import "global/utils";
-@import "blocks/title";
-@import "blocks/btn";
-@import "blocks/link";
+@import "../components/title/title.scss";
+@import "../components/button/btn.scss";
+@import "../components/link/link.scss";
 @import "blocks/login-form";
-@import "blocks/form-input";
+@import "../components/input/form-input.scss";
 @import "blocks/error-block";
 @import "blocks/chat-block";
 @import "blocks/chat-list";

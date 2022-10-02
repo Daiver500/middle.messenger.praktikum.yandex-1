@@ -1,6 +1,6 @@
 import Block from '../../core/Block';
 
-import './link.css';
+import '../../sass/style.scss';
 
 interface LinkProps {
   text: string;
@@ -23,6 +23,6 @@ export class Link extends Block {
 
   render() {
     // language=hbs
-    return `<a href="{{to}}">{{text}}</a>`;
+    return `<a class="link" href="{{to}}">{{text}}</a>`;
   }
 }

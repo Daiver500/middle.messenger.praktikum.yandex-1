@@ -1,4 +1,4 @@
-.btn {
+.btn__btn {
   background-color: $color-tory-blue;
   padding: 12px 70px;
   border-radius: 8px;
@@ -20,4 +20,8 @@
 
 .btn--large {
   max-width: 280px;
+}
+
+.btn {
+  margin: 10px;
 }

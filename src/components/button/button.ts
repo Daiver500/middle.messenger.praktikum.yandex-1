@@ -1,6 +1,7 @@
 import Block from '../../core/Block';
 
-import './button.css';
+import '../../sass/style.scss';
+
 
 interface ButtonProps {
   text: string;
@@ -15,8 +16,8 @@ export class Button extends Block {
   protected render(): string {
     // language=hbs
     return `
-      <div class="button">
-        <button class="button__button" type="button">{{text}}</button>
+      <div class="btn">
+        <button class="btn__btn" type="button">{{text}}</button>
       </div>
     `;
   }

@@ -1,6 +1,6 @@
 import Block from '../../core/Block';
 
-import './input.css';
+import '../../sass/style.scss';
 
 interface InputProps {
   onChange?: () => void;

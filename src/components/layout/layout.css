@@ -1,6 +1,5 @@
 .screen {
-  width: var(--screen-width);
-  height: var(--screen-height);
+
   background: var(--screen-background);
   display: flex;
   flex-direction: column;

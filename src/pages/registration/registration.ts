@@ -1,26 +1,30 @@
 import Block from '../../core/Block';
 
-export class LoginPage extends Block {
+export class RegistrationPage extends Block {
   protected getStateFromProps() {
     this.state = {
       values: {
         login: '',
         password: '',
+        email: '',
       },
       errors: {
         login: '',
         password: '',
+        email: '',
       },
       onLogin: () => {
         const loginData = {
           login: (this.refs.login.firstElementChild as HTMLInputElement).value,
-          password: (this.refs.password.firstElementChild as HTMLInputElement).value
+          password: (this.refs.password.firstElementChild as HTMLInputElement).value,
+          email: (this.refs.password.firstElementChild as HTMLInputElement).value
         };
 
         const nextState = {
           errors: {
             login: '',
             password: '',
+            email: '',
           },
           values: { ...loginData },
         };
@@ -33,6 +37,10 @@ export class LoginPage extends Block {
 
         if (!loginData.password) {
           nextState.errors.password = 'Password is required';
+        }
+
+        if (!loginData.email) {
+          nextState.errors.email = 'Email is required';
         }
 
         this.setState(nextState);
@@ -49,13 +57,22 @@ export class LoginPage extends Block {
     return `
     {{#Layout name="Login" }}
 
-    {{{Title
-      text="Вход"
-      class="title"
-      mod=""
-    }}}
-
     <form class="login-form form">
+
+      {{{Title
+        text="Регистрация"
+        class="title"
+        mod=""
+      }}}
+
+      {{{Input
+        value="${values.email}"
+        error="${errors.email}"
+        ref="email"
+        id="email"
+        type="email"
+        placeholder="Почта"
+      }}}
 
       {{{Input
         value="${values.login}"
@@ -67,6 +84,33 @@ export class LoginPage extends Block {
       }}}
 
       {{{Input
+        value=""
+        error=""
+        ref="name"
+        id="name"
+        type="text"
+        placeholder="Имя"
+      }}}
+
+      {{{Input
+        value=""
+        error=""
+        ref="surname"
+        id="surname"
+        type="text"
+        placeholder="Фамилия"
+      }}}
+
+      {{{Input
+        value=""
+        error=""
+        ref="phone"
+        id="login"
+        type="tel"
+        placeholder="Телефон"
+      }}}
+
+      {{{Input
         value="${values.password}"
         error="${errors.password}"
         ref="password"
@@ -75,14 +119,23 @@ export class LoginPage extends Block {
         placeholder="Пароль"
       }}}
 
+      {{{Input
+        value="${values.password}"
+        error="${errors.password}"
+        ref="password"
+        id="password"
+        type="password"
+        placeholder="Пароль (ещё раз)"
+      }}}
+
       {{{Button
-        text="Авторизироваться"
+        text="Зарегистрироваться"
         onClick=onLogin
       }}}
 
       {{{Link
         to="#"
-        text="Нет аккаунта?"
+        text="Войти"
       }}}
     </form>
   {{/Layout}}

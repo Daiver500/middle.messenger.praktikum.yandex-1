@@ -58,3 +58,25 @@ textarea {
   background-color: $color-whisper;
 }
 
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: $ff-inter;
+  background: var(--message-background);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,37 @@
+
+.input__input {
+  width: 100%;
+  min-height: 37px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 1px solid $color-tory-blue;
+  font-size: 13px;
+  line-height: 13px;
+  color: $color-nero;
+  outline: none;
+  transition: border-color, 0.3s ease;
+
+  @media (hover: hover), screen and (min-width: 0) {
+    &:hover,
+    &:focus {
+      border-color: $color-green;
+    }
+  }
+}
+
+.input__input::placeholder {
+  color: $color-nobel;
+}
+
+.input__error {
+  font-size: 12px;
+  text-align: left;
+  height: 12px;
+  color: $color-red-orange;
+}
+
+.input {
+  min-width: 100%;
+  margin-bottom: 32px;
+}
+
