@@ -20,13 +20,13 @@ registerComponent(Layout);
 document.addEventListener("DOMContentLoaded", () => {
   // DEV: Расскоментировать нужно страницу для отображения
 
-  const App = new LoginPage();
-  //const App = new OnboardingPage({
-   //links: [
-     // {to: '#signup', text: 'signup'},
-     // {to: '#login', text: 'login'},
-    //]
-  //});
+  //const App = new LoginPage();
+  const App = new OnboardingPage({
+   links: [
+      {to: '#signup', text: 'signup'},
+      {to: '#login', text: 'login'},
+    ]
+  });
 
   renderDOM(App);
 });
